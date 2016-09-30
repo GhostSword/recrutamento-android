@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.axelio.recrutamento.MainActivityFragment"
+    tools:showIn="@layout/activity_main">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="#CCCCCC">
+
+        <com.android.volley.toolbox.NetworkImageView
+            android:id="@+id/imageview_header"
+            android:layout_width="match_parent"
+            android:layout_height="225dp"
+            android:background="@drawable/season_background_placeholder"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY" />
+
+        <com.android.volley.toolbox.NetworkImageView
+            android:id="@+id/imageview_thumbnail"
+            android:layout_width="100dp"
+            android:layout_height="130dp"
+            android:layout_alignBottom="@+id/relativelayout_rating"
+            android:layout_marginLeft="15dp"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            android:src="@drawable/serie_thumbnail_placeholder"/>
+
+        <RelativeLayout
+            android:id="@+id/relativelayout_rating"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_below="@id/imageview_header"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentRight="true">
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/season_rating"
+                android:layout_centerInParent="true"/>
+
+            <TextView
+                android:id="@+id/textview_season_rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0.0"
+                android:layout_centerInParent="true"
+                android:textSize="20sp"
+                android:textColor="@android:color/white"/>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/textview_header"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#CCCCCC"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:text="Episodes"
+        android:textColor="#777777"
+        android:textSize="20sp" />
+
+    <ListView
+        android:id="@+id/listview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="#9E9E9E"
+        android:dividerHeight="1dp"
+        android:scrollbars="none"></ListView>
+
+</FrameLayout>

@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Recrutamento</string>
+    <string name="action_settings">Settings</string>
+    <string name="trakt_client_id">a291abc24de7f9ed78b980f7b168e727287be4a83a219d98d6b8674318a70383</string>
+</resources>
